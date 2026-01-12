@@ -189,11 +189,16 @@ class MapLibreView: NSObject, FlutterPlatformView, MLNMapViewDelegate,
     }
 
     func gestureRecognizer(
-        _: UIGestureRecognizer,
-        shouldRecognizeSimultaneouslyWith _: UIGestureRecognizer
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
     ) -> Bool {
-        // Do not override the default behavior
-        true
+        // Prevent tap gestures from firing simultaneously
+        // This fixes the double-click bug where MapEventClick fires twice for a single tap
+        if gestureRecognizer is UITapGestureRecognizer &&
+           otherGestureRecognizer is UITapGestureRecognizer {
+            return false
+        }
+        return true
     }
 
     // MLNMapViewDelegate method called when camera is about to start changing
