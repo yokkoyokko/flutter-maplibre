@@ -211,7 +211,7 @@ extension MLNStyleLayerExt on MLNStyleLayer {
       case 'icon-image':
         (this as MLNSymbolStyleLayer).iconImageName = expression;
       case 'icon-optional':
-        // (this as MLNSymbolStyleLayer).iconOptional = expression;
+        (this as MLNSymbolStyleLayer).iconOptional = expression;
         break;
       case 'icon-rotate':
         (this as MLNSymbolStyleLayer).iconRotation = expression;
@@ -240,7 +240,7 @@ extension MLNStyleLayerExt on MLNStyleLayer {
       case 'text-justify':
         (this as MLNSymbolStyleLayer).textJustification = expression;
       case 'text-optional':
-        // (this as MLNSymbolStyleLayer).textOptional = expression;
+        (this as MLNSymbolStyleLayer).textOptional = expression;
         break;
       case 'text-rotate':
         (this as MLNSymbolStyleLayer).textRotation = expression;
