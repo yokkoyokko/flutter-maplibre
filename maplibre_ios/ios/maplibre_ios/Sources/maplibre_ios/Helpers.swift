@@ -79,6 +79,12 @@ public class Helpers: NSObject {
                 }
                 return NSExpression(mglJSONObject: json)
             }
+            // parse boolean values
+            if expression == "true" {
+                return NSExpression(forConstantValue: true)
+            } else if expression == "false" {
+                return NSExpression(forConstantValue: false)
+            }
             // parse as a constant value
             return NSExpression(forConstantValue: expression)
 
