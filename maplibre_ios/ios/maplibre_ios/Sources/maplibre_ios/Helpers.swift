@@ -81,8 +81,10 @@ public class Helpers: NSObject {
             }
             // parse boolean values
             if expression == "true" {
+                print("  → Parsed as BOOLEAN true")
                 return NSExpression(forConstantValue: true)
             } else if expression == "false" {
+                print("  → Parsed as BOOLEAN false")
                 return NSExpression(forConstantValue: false)
             }
             // parse as a constant value
