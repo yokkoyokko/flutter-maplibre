@@ -254,6 +254,8 @@ extension MLNStyleLayerExt on MLNStyleLayer {
         (this as MLNSymbolStyleLayer).textTranslation = expression;
       case 'text-translate-anchor':
         (this as MLNSymbolStyleLayer).textTranslationAnchor = expression;
+      case 'symbol-sort-key':
+        (this as MLNSymbolStyleLayer).symbolSortKey = expression;
       default:
         Helpers.setValueWithTarget(
           this,
