@@ -211,7 +211,6 @@ extension MLNStyleLayerExt on MLNStyleLayer {
       case 'icon-image':
         (this as MLNSymbolStyleLayer).iconImageName = expression;
       case 'icon-optional':
-        // iconOptional setter does not exist in maplibre_ios
         // (this as MLNSymbolStyleLayer).iconOptional = expression;
         break;
       case 'icon-rotate':
@@ -241,7 +240,6 @@ extension MLNStyleLayerExt on MLNStyleLayer {
       case 'text-justify':
         (this as MLNSymbolStyleLayer).textJustification = expression;
       case 'text-optional':
-        // textOptional setter does not exist in maplibre_ios
         // (this as MLNSymbolStyleLayer).textOptional = expression;
         break;
       case 'text-rotate':
@@ -256,8 +254,6 @@ extension MLNStyleLayerExt on MLNStyleLayer {
         (this as MLNSymbolStyleLayer).textTranslation = expression;
       case 'text-translate-anchor':
         (this as MLNSymbolStyleLayer).textTranslationAnchor = expression;
-      case 'symbol-sort-key':
-        (this as MLNSymbolStyleLayer).symbolSortKey = expression;
       default:
         Helpers.setValueWithTarget(
           this,
